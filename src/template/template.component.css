@@ -1,0 +1,22 @@
+.warning-message {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(38, 50, 160);
+  margin: 20px;
+}
+
+:host {
+  height: 100% !important;/* Garante que o HTML e o body ocupem 100% da altura */
+  margin: 0; /* Remove margens padrão */
+}
+
+.LayoutLogado {
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+}
+
+.mainConteudo {
+  flex: 1; /* Faz com que .mainConteudo ocupe o espaço restante */
+  margin-bottom: 1rem; /* Mantém a margem inferior */
+}

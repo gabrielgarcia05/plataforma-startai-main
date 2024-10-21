@@ -1,0 +1,37 @@
+.modal-overlay {
+    position: fixed; /* Fixa a posição */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Certifique-se de que a modal está acima de outros conteúdos */
+}
+
+.modal-dialog {
+    width: 30vw; /* 25% da largura da tela */
+    height: 10vh; /* 25% da altura da tela */
+    max-width: 800px; /* Limite máximo de largura */
+    max-height: 400px; /* Limite máximo de altura */
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 16px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #f1f1f1;
+    width: 100%; /* Preencher toda a largura do modal */
+    height: 100%; /* Preencher toda a altura do modal */
+    padding: 100px; 
+    border: 2px solid blue; /* Borda azul */
+    border-radius: 15px; /* Bordas arredondadas */
+}

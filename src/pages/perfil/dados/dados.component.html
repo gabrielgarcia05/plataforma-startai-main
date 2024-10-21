@@ -1,0 +1,36 @@
+<div class="container-tela">
+    <div class="menu">
+        <div class="titulo_menu">
+            <h1>CONFIGURAÇÕES</h1>
+        </div>
+        <div class="itens_menu">
+            <a  class="selected" (click)="dadosPessoais()">DADOS PESSOAIS</a>
+            <a  (click)="senha()">SENHA</a>
+        </div>
+    </div>
+
+    <form [formGroup]="dadosForm" (ngSubmit)="onSubmit()" class="dados_pessoais">
+        <div class="campo">
+            <label for="nome">NOME</label>
+            <input type="text" id="nome" formControlName="nome" placeholder="Nome" required>
+        </div>
+        <div class="campo">
+            <label for="dataNascimento">DATA DE NASCIMENTO</label>
+            <input type="date" id="dataNascimento" formControlName="dataNascimento" required>
+        </div>
+        <div class="campo">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" formControlName="email" placeholder="Email" required>
+        </div>
+        <div class="campo">
+            <label for="controle">TIPO DE CONTROLE</label>
+            <select formControlName="controle" required>
+                <option value="" disabled selected>Selecione o tipo de controle</option>
+                <option value=1>Perguntar Sempre</option>
+                <option value=2>Controle Ocular</option>
+                <option value=3>Teclado</option>
+            </select>
+        </div>
+        <button type="submit" class="button">Atualizar</button>
+    </form>
+</div>

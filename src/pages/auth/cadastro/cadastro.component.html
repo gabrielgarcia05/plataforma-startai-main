@@ -1,0 +1,64 @@
+<div class="container-fluid fundo-completo">
+    <div class="row h-100">
+  
+      <div class="col-12 col-md-6 d-flex justify-content-start descricao">
+        <div class="mensagem-bemvindo">
+          <h1>CRIE SUA CONTA</h1>
+          <p class="fs-4">
+            Bem-vindo à nossa plataforma de jogos inclusivos! Estamos felizes em ter você conosco. 
+            Para criar sua conta, preencha as informações abaixo e junte-se a nós na missão de promover 
+            a diversão e a inclusão para todas as crianças.
+          </p>
+        </div>
+      </div>
+  
+  
+  
+      <div class="col-   col-md-6 d-flex flex-column align-items-center justify-content-center">
+        <div class="caixa-login">
+          <div class="text-center">
+            <img src="../../assets/img/logo.png" alt="Ícone de login" class="logo">
+            <p class="mt-3 titulo">CRIE SUA CONTA</p>    
+          </div>
+          <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+  
+            <div class="form-group">
+              <label for="nome">NOME</label>
+              <input type="text" id="nome" class="controle-formulario" formControlName="nome" placeholder="Nome" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" class="controle-formulario" formControlName="email" placeholder="Email" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="senha">SENHA</label>
+              <input type="password" id="senha" class="controle-formulario" formControlName="senha" placeholder="Senha" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="dataNascimento">DATA DE NASCIMENTO</label>
+              <input type="date" id="dataNascimento" class="controle-formulario" formControlName="dataNascimento" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="controle">CONTROLE</label>
+              <select class="form-select controle-formulario" formControlName="controle" required>
+                <option value="" disabled selected>Selecione o tipo de controle</option>
+                <option value="1">Perguntar Sempre</option>
+                <option value="2">Controle Ocular</option>
+                <option value="3">Teclado</option>
+              </select>
+            </div>
+  
+            <button type="submit" class="btn btn-primary btn-login" [disabled]="cadastroForm.invalid">CADASTRAR</button>
+          </form>
+        </div>
+  
+        <p class="mt-3 text-white texto-rodape">Já possui conta? <a class="text-white" (click)="login()">Faça seu Login!</a></p>
+        <p class="mt-3 text-white texto-rodape">Se você esqueceu sua senha <a class="text-white" (click)="redefinirSenha()">clique aqui!</a></p>
+      </div>
+    </div>
+  </div>
+  

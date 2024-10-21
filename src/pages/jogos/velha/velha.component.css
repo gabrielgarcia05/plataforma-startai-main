@@ -1,0 +1,52 @@
+.cell {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.cell.selected {
+    background-color: #3053aa;
+}
+.cell.jogador {
+    font-size: 30px;
+    color: #3053aa;
+    font-weight: bold;
+    background-color: lightblue;
+  }
+  
+  .cell.bot {
+    font-size: 30px;
+    color: #30aa4e;
+    font-weight: bold;
+    background-color: lightblue;
+  }
+  
+
+  .container-fluid {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container-game {
+  flex: 1; 
+  display: flex;
+  justify-content: center; 
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: center; 
+}
+
+.container-camera, .container-descricao, .container-placar {
+  margin-bottom: 20px; 
+}

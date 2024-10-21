@@ -1,0 +1,95 @@
+/* Container principal */
+.container-tela {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Menu lateral */
+.menu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* O menu ocupa 1 parte do espaço */
+}
+
+.titulo_menu {
+    font-weight: bold;
+    color: #3053aa;
+}
+
+.itens_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.itens_menu a {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.itens_menu .selected,
+.itens_menu a:hover {
+    background-color: #3053aa;
+    color: white;
+}
+
+/* Formulário de dados pessoais */
+.dados_pessoais {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 3; /* O formulário ocupa 2 partes do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #3053aa;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.button {
+    background-color: #3053aa;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #466ed3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+    }
+
+    .menu, .dados_pessoais {
+        width: 100%;
+    }
+}

@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quadrado {
+    flex: 1 1 200px;
+    max-width: 25%;
+    aspect-ratio: 1;
+    background-color: #f1f1f1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.quadrado:hover {
+    background-color: #F1EE4C;
+    transform: scale(1.1);
+}
+
+.quadrado img {
+    width: 80%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.full-height {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

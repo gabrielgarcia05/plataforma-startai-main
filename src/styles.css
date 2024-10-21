@@ -1,0 +1,115 @@
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.snackbar {
+    visibility: hidden; /* Escondido por padrão */
+    min-width: 250px; /* Largura mínima */
+    margin-left: -125px; /* Centro horizontalmente */
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Texto centralizado */
+    border-radius: 2px; /* Bordas arredondadas */
+    padding: 16px; /* Espaçamento interno */
+    position: fixed; /* Fixo em relação à tela */
+    z-index: 1; /* Sobreposição */
+    left: 50%; /* Centraliza horizontalmente */
+    top: 30px; /* Distância do topo */
+    transition: visibility 0s, opacity 0.5s linear; /* Transição suave */
+    opacity: 0; /* Inicialmente invisível */
+  }
+  
+.snackbar.show {
+  visibility: visible; /* Mostra o Snackbar */
+  opacity: 1; /* Torna visível */
+}
+
+.divider{
+  border-top: 1px solid #3053aa; /* Define a cor e espessura da linha */
+  margin: 20px 0; 
+}
+
+html, body {
+  height: 100% !important;
+  margin: 0;
+}
+
+
+
+/* Jogos */
+canvas{
+  border: 15px solid #f1f1f1;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-game{
+  flex-basis: 70%; 
+  position: relative;
+}
+
+.game{
+  width: 90%; 
+  height: 90%; 
+  position: absolute; 
+  top: 5%; 
+  border: 15px solid #f1f1f1;
+  background-color: #f1f1f1;
+  left: 5%; 
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.jogo{
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
+  height: 100%; 
+  width: 100%;
+}
+
+.container-camera{
+  height: 30%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px
+}
+
+.container-descricao{
+  height: 300px; 
+  padding: 10px;
+  border: 15px solid #f1f1f1;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
+  font-size: clamp(12px, 1.3vw, 20px); /* Tamanho de fonte responsivo */
+}
+
+
+.container-placar{
+  height: 300px; 
+  padding: 10px;
+  border: 15px solid #f1f1f1;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
+  font-size: clamp(12px, 1.3vw, 20px); /* Tamanho de fonte responsivo */
+}
+
+.container-placar img{
+  width: 25px;
+  height: 25px;
+}
+
+a{
+  cursor: pointer;
+}

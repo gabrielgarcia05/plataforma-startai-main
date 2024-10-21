@@ -1,0 +1,56 @@
+<div class="container-fluid d-flex flex-column" style="height: 100%;">
+  <div class="d-flex align-items-center" style="height: 10%;">
+      <button class="btn btn-light" style="margin-left: 40px;" (click)="voltar()">
+          <img src="../../../assets/img/voltar.png" alt="Voltar" style="width: 16px; height: 16px; margin-right: 5px;"/> VOLTAR
+      </button>
+  </div>
+
+  <div class="d-flex" style="height: 90%;">
+    <div class="flex-grow-1 container-game">
+      <div class="game">
+        <div class="game-container" style="height: 90%;">
+          <div class="carta" *ngFor="let carta of cartas" [class.selected]="carta.selecionada" (click)="virarCarta(carta)">
+            <img *ngIf="carta.virada" [src]="carta.imagem" alt="Card Image">
+            <div *ngIf="!carta.virada" class="card-back"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-lightcoral d-flex flex-column" style="flex-basis: 30%; height: 100%;">
+        <div class="container-camera" *ngIf="ReconhecimentoOcular">
+            <video #videoElement autoplay style="display: none;"></video>
+            <canvas #canvasElement></canvas> 
+        </div>
+
+        <div class="container-descricao">
+            <span style="font-weight: bold;">JOGO DA MEMÓRIA</span>
+            <div class="divider"></div>
+            <p>
+              As cartas estão viradas para baixo, e ao piscar, você vira uma delas, tentando lembrar sua posição e a da próxima que escolher. 
+              O objetivo é formar o maior número de pares possível, exercitando a memória e a concentração.              
+            </p>
+        </div>
+
+        <div class="container-placar" >
+          <span style="font-weight: bold;">PLACAR</span>
+          <div class="divider"></div>
+          <div *ngIf="jogadores.length > 0">
+            <div class="col-12" *ngFor="let jogador of jogadores; let i = index">
+              <div class="d-flex align-items-center mb-3">
+                  <img [src]="getImagemPorIndice(i)" alt="Imagem do jogador" class="fixed-image me-2">
+                  <span>{{jogador.nome}}</span>
+              </div>
+          </div>
+          </div>
+          <div *ngIf="jogadores.length === 0">
+            <span>Nenhum jogador disponível.</span>
+          </div>
+       </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<app-modal-novo-jogo *ngIf="showVitoria" [mensagem]="'Parabéns!! Você ganhou!!'"></app-modal-novo-jogo>

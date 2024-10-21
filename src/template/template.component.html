@@ -1,0 +1,26 @@
+
+<!-- usuario Logado -->
+<div *ngIf="isLogado && isDesktop" class="LayoutLogado">
+    <app-navbar></app-navbar>
+    <div class="mainConteudo">
+        <ng-container>
+            <router-outlet></router-outlet>
+        </ng-container>
+    </div>
+</div>
+
+
+<!-- usuario deslogado -->
+<div *ngIf="!isLogado && isDesktop" class="LayoutDeslogado" style="height: 100%;">
+    <ng-container >
+        <router-outlet></router-outlet>
+    </ng-container>
+</div>
+
+<!-- Telas menores que computador -->
+<ng-container *ngIf="!isDesktop">
+    <span>A Plataforma só está disponível para computadores</span>
+</ng-container>
+
+
+<app-loading [isLoading]="isLoading"></app-loading>

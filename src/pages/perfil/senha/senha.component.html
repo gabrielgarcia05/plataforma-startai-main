@@ -1,0 +1,38 @@
+<div class="container-teste">
+    
+
+</div>
+
+
+<div class="container-tela">
+  <div class="menu">
+      <div class="titulo_menu">
+          <h1>CONFIGURAÇÕES</h1>
+      </div>
+      <div class="itens_menu">
+        <a (click)="dadosPessoais()">DADOS PESSOAIS</a>
+        <a class="selected" (click)="senha()">SENHA</a>
+    </div>
+  </div>
+
+  <form [formGroup]="redefinirForm" (ngSubmit)="onSubmit()" class="dados_pessoais">
+    <div class="campo">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" class="controle-formulario" formControlName="email" placeholder="Email" required>
+    </div>
+    
+    <div class="campo">
+        <label for="dataNascimento">DATA DE NASCIMENTO</label>
+        <input type="date" id="dataNascimento" class="controle-formulario" formControlName="dataNascimento" required>
+    </div>
+
+    <div class="campo">
+        <label for="campo">NOVA SENHA</label>
+        <input type="password" id="senha" class="controle-formulario" formControlName="senha" placeholder="Senha" required>
+    </div>
+
+    <button type="submit" class="button" [disabled]="redefinirForm.invalid">Redefinir</button>
+  </form>
+
+
+</div>

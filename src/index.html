@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plataforma Startai</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /* Garante que o HTML e o body ocupem 100% da altura */
+    html, body {
+      height: 100% !important;
+      display: block;
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      background: linear-gradient(45deg, #7db1ff, #3053aa, #0057FF, #3479FF, #0741B0, #6FA0FF);
+      background-size: 400% 400%;
+      animation: animacao-aquarela 15s ease infinite;
+      margin: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+  @keyframes animacao-aquarela {
+      0% {
+          background-position: 0% 50%;
+      }
+      25% {
+          background-position: 50% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      75% {
+          background-position: 50% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+    /* Garante que o app-root também ocupe 100% da tela */
+    app-root {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@latest"></script>
+</body>
+</html>
